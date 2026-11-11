@@ -1,0 +1,313 @@
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --negro: #0a0a0a;
+    --gris: #151515;
+    --cyan: #00ffff;
+    --rojo: #ff0033;
+    --blanco: #ffffff;
+    --texto: #aaaaaa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+/* ENCABEZADO */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    background: #101010;
+    border-bottom: 1px solid #252525;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--rojo);
+}
+
+.back {
+    color: #ddd;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.back:hover {
+    color: var(--cyan);
+}
+
+/* PRESENTACIÓN */
+
+.hero {
+    padding: 85px 10%;
+    text-align: center;
+
+    background:
+    radial-gradient(circle, #003b3b44, transparent 65%);
+}
+
+.subtitle {
+    color: var(--rojo);
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+}
+
+.hero p:not(.subtitle) {
+    color: var(--texto);
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+}
+
+/* BOTONES */
+
+.btn {
+    display: inline-block;
+    background: var(--rojo);
+    color: white;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #d9002b;
+    transform: translateY(-2px);
+}
+
+/* CATÁLOGO */
+
+main {
+    padding: 40px 9%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 span {
+    color: var(--cyan);
+}
+
+.section-title p {
+    color: var(--texto);
+}
+
+/* PRODUCTOS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: var(--gris);
+    border: 1px solid #292929;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--cyan);
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--rojo);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    color: var(--cyan);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: var(--texto);
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 66px;
+}
+
+.product-info strong {
+    display: block;
+    color: var(--rojo);
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+/* VENTAJAS */
+
+.benefits {
+    margin-top: 90px;
+    padding: 55px 20px;
+    background: #101010;
+    border-radius: 10px;
+}
+
+.benefit-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.benefit {
+    text-align: center;
+    padding: 20px;
+    background: var(--gris);
+    border-radius: 8px;
+}
+
+.benefit span {
+    font-size: 38px;
+}
+
+.benefit h3 {
+    color: var(--cyan);
+    margin: 15px 0 10px;
+}
+
+.benefit p {
+    color: var(--texto);
+    font-size: 14px;
+}
+
+/* CONTACTO */
+
+.contact {
+    text-align: center;
+    margin: 70px 0 30px;
+    padding: 55px 20px;
+    background: #151515;
+    border: 1px solid #252525;
+    border-radius: 10px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact h2 span {
+    color: var(--cyan);
+}
+
+.contact p {
+    color: var(--texto);
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #101010;
+    padding: 30px 10%;
+    text-align: center;
+    border-top: 1px solid #252525;
+}
+
+footer h3 {
+    color: var(--cyan);
+    margin-bottom: 10px;
+}
+
+footer h3 span {
+    color: var(--rojo);
+}
+
+footer p {
+    color: #777;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .products,
+    .benefit-list {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    main {
+        padding: 35px 6%;
+    }
+
+}

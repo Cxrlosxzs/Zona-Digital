@@ -1,0 +1,169 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: white;
+}
+
+/* ENCABEZADO */
+
+header {
+    background: #151515;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ffff;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00ffff;
+}
+
+.volver {
+    color: #00ffff;
+    text-decoration: none;
+    border: 1px solid #00ffff;
+    padding: 10px 18px;
+    transition: 0.3s;
+}
+
+.volver:hover {
+    background: #00ffff;
+    color: black;
+}
+
+/* PROVEEDORES */
+
+.proveedores {
+    padding: 75px 8%;
+    min-height: 80vh;
+}
+
+.titulo {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titulo p:first-child {
+    color: #ff0033;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.titulo h1 {
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.titulo h1 span {
+    color: #00ffff;
+}
+
+.descripcion {
+    color: #aaa;
+    font-size: 16px;
+}
+
+/* LISTA DE MARCAS */
+
+.lista-proveedores {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.marca {
+    background: #151515;
+    border: 1px solid #292929;
+    border-radius: 10px;
+    padding: 25px 15px;
+    min-height: 190px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.marca:hover {
+    transform: translateY(-7px);
+    border-color: #00ffff;
+    box-shadow: 0 0 15px #00ffff44;
+}
+
+.marca img {
+    width: 100%;
+    max-width: 170px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.marca h3 {
+    color: #00ffff;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+/* PIE DE PÁGINA */
+
+footer {
+    background: #151515;
+    text-align: center;
+    padding: 25px;
+    color: #888;
+    border-top: 2px solid #00ffff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .lista-proveedores {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .titulo h1 {
+        font-size: 27px;
+    }
+
+    .proveedores {
+        padding: 50px 5%;
+    }
+
+    .lista-proveedores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .marca {
+        min-height: 155px;
+    }
+
+    .marca img {
+        max-width: 125px;
+        height: 75px;
+    }
+}
+
